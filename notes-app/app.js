@@ -16,13 +16,13 @@ yargs.command({
             type: 'string' // The type of the title argument is string
         },
         body: {
-            describe: 'Note body', // A description of the body argument
+            describe: 'Note body', 
             demandOption: true, // The body argument is required
             type: 'string' // The type of the body argument is string
         }
     },
     handler(argv) { // The function to run when the command is executed
-        notes.addNote(argv.title, argv.body) // Call the addNote function from the notes module
+        notes.addNote(argv.title, argv.body) 
     }
 })
 
@@ -38,7 +38,7 @@ yargs.command({
         }
     },
     handler(argv) { // The function to run when the command is executed
-        notes.removeNote(argv.title) // Call the removeNote function from the notes module
+        notes.removeNote(argv.title) 
     }
 })
 
@@ -47,7 +47,7 @@ yargs.command({
     command: 'list', 
     describe: 'List your notes', // A description of the command
     handler() { // The function to run when the command is executed
-        notes.listNotes() // Call the listNotes function from the notes module
+        notes.listNotes() 
     }
 })
 
@@ -63,7 +63,7 @@ yargs.command({
         }
     },
     handler(argv) { // The function to run when the command is executed
-        notes.readNote(argv.title) // Call the readNote function from the notes module
+        notes.readNote(argv.title) 
     }
 })
 
